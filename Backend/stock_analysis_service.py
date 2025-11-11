@@ -17,7 +17,7 @@ load_dotenv()
 try:
     # VADER lexicon (sentiment analysis ke liye)
     nltk.data.find('sentiment/vader_lexicon.zip')
-except nltk.downloader.DownloadError:
+except LookupError:
     print("Downloading VADER lexicon...")
     nltk.download('vader_lexicon')
     
