@@ -1,0 +1,16 @@
+1. Ignore Backend (Python/Flask) files
+
+backend/venv/
+backend/pycache/
+backend/.env
+
+2. Ignore Frontend (Next.js) files
+
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+3. General OS files
+
+.DS_Store
+*.local
