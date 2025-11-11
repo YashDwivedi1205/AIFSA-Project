@@ -32,7 +32,7 @@ MONGO_HISTORICAL_COLLECTION = "historical_data"
 MONGO_INTRADAY_1D_COLLECTION = "intraday_1d_data" # 1-Day Chart
 MONGO_INTRADAY_5D_COLLECTION = "intraday_5d_data" # 1-Week Chart
 
-# 🟢 CACHING TIMES (Final)
+#  CACHING TIMES (Final)
 TTL_LIVE_QUOTE_SECONDS = 1800     # 30 Minutes for "Live" Price/Volume
 TTL_INTRADAY_SECONDS = 1800       # 30 Minutes for 1-Day/1-Week Chart
 TTL_FUNDAMENTAL_SECONDS = 1800    # 30 Minutes for Fundamental Data
