@@ -102,7 +102,7 @@ Follow these rules strictly:
                         uri: attribution.web?.uri,
                         title: attribution.web?.title,
                     }))
-                    .filter(source => source.uri && source.title);
+                    .filter((source: { uri: string | undefined; title: string | undefined }) => source.uri && source.title);
             }
 
             return {
