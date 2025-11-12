@@ -10,15 +10,20 @@ interface NavCardProps {
 }
 
 // Reusable Card Component
+
 const NavCard: React.FC<NavCardProps> = ({ href, icon, title, description }) => (
   <a
     href={href}
-    className="group flex flex-col items-center justify-start p-6 bg-white rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1 w-full md:w-80"
+    className="group flex flex-col items-center justify-start p-6 bg-white rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1 w-full"
   >
     <div className="p-4 bg-indigo-100 rounded-full mb-4 group-hover:bg-indigo-500 transition-colors duration-300">
-      {React.cloneElement(icon as React.ReactElement, { 
-        className: "w-8 h-8 text-indigo-600 group-hover:text-white transition-colors duration-300" 
-      })}
+      {React.isValidElement(icon) ? (
+        React.cloneElement(icon as React.ReactElement<any>, {
+          className: "w-8 h-8 text-indigo-600 group-hover:text-white transition-colors duration-300"
+        })
+      ) : (
+        icon 
+      )}
     </div>
     <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
     <p className="text-gray-600 text-center">{description}</p>
