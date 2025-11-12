@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Loader2, Search, Zap, CheckCircle, ChevronDown, ChevronUp } from 'lucide-react';
-import { debounce } from 'lodash';
 
 // Type Definitions 
 interface ChatMessage {
