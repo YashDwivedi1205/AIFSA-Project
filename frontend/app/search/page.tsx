@@ -62,7 +62,7 @@ interface FullAnalysisData {
 
 // --- DATA FETCHING (Full Analysis) ---
 async function getFullAnalysis(ticker: string): Promise<FullAnalysisData | null> {
-  const API_URL = `http://localhost:5000/api/full-analysis/${ticker}`;
+  const API_URL = `https://aifsa.onrender.com/api/full-analysis/${ticker}`;
   try {
     const response = await fetch(API_URL, {
       cache: 'no-store',

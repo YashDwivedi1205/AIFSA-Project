@@ -28,7 +28,7 @@ interface ApiResponse {
 
 // --- DATA FETCHING ---
 async function getTrendingStocks(): Promise<RankedTrendingStock[]> {
-  const API_URL = 'http://localhost:5000/api/trending-stocks';
+  const API_URL = 'https://aifsa.onrender.com/api/trending-stocks';
   try {
     const response = await fetch(API_URL, {
       cache: 'no-store',
